@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import com.zatiq.config.AppConfig;
 
 @Configuration
-@ComponentScan({"com.areyes.erload"})
+@ComponentScan({"com.zatiq"})
 public class MainEntry {
 	public static void main(String[] args) {
 		port(8081);

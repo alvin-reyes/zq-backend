@@ -33,9 +33,9 @@ public class DataSourceFactoryConfig {
 	public DataSource getDataSource() {
 		DriverManagerDataSource dm = new DriverManagerDataSource();
 		dm.setDriverClassName("com.mysql.jdbc.Driver");
-		dm.setUrl("jdbc:mysql://localhost:3306/erload_db");
-		dm.setUsername("areyes");
-		dm.setPassword("password");
+		dm.setUrl("jdbc:mysql://localhost:3306/zqdb");
+		dm.setUsername("zqn");
+		dm.setPassword("L2a104z123");
 		return dm;
 	}
 }

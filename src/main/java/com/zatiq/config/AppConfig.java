@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Import;
  * The Class AppConfig.
  */
 @Configuration
-@ComponentScan({"com.areyes.erload"})
+@ComponentScan({"com.zatiq"})
 @Import(value = {ServiceConfig.class,DaoConfig.class,DataSourceFactoryConfig.class})
 public class AppConfig {
 	
