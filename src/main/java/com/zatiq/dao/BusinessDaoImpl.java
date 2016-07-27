@@ -12,9 +12,17 @@ import com.zatiq.dao.filter.BusinessFilter;
 import com.zatiq.jooq.gen.tables.records.BusinessRecord;
 import com.zatiq.obj.Business;
 
+/**
+ * The Class BusinessDaoImpl.
+ */
 @Repository
 public class BusinessDaoImpl extends BaseDao {
 	
+	/**
+	 * Insert or update business.
+	 *
+	 * @param business the business
+	 */
 	public void insertOrUpdateBusiness(Business business) {
 		try {
 			//	We need to check first if this is an update or not. So Let's check if the rating id is 0 or now.
@@ -38,6 +46,12 @@ public class BusinessDaoImpl extends BaseDao {
 		}
 	}
 	
+	/**
+	 * Gets the business.
+	 *
+	 * @param business the business
+	 * @return the business
+	 */
 	public Result<BusinessRecord> getBusiness(BusinessFilter business) {
 		return null;
 	}

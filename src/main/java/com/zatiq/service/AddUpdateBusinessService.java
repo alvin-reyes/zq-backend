@@ -5,9 +5,7 @@ import static spark.Spark.post;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.zatiq.dao.BusinessDaoImpl;
-import com.zatiq.dao.RatingsDaoImpl;
 @Service
 public class AddUpdateBusinessService {
 	

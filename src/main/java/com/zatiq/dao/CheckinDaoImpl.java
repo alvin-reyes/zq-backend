@@ -13,9 +13,18 @@ import com.zatiq.jooq.gen.tables.BusinessCheckin;
 import com.zatiq.jooq.gen.tables.records.BusinessCheckinRecord;
 import com.zatiq.obj.Checkin;
 
+
+/**
+ * The Class CheckinDaoImpl.
+ */
 @Repository
 public class CheckinDaoImpl extends BaseDao {
 	
+	/**
+	 * Insert or update checkin.
+	 *
+	 * @param checkin the checkin
+	 */
 	public void insertOrUpdateCheckin(Checkin checkin) {
 		try {
 			// We need to check first if this is an update or not. So Let's
@@ -48,6 +57,12 @@ public class CheckinDaoImpl extends BaseDao {
 		}
 	}
 
+	/**
+	 * Gets the checkins.
+	 *
+	 * @param review the review
+	 * @return the checkins
+	 */
 	public Result<BusinessCheckinRecord> getCheckins(CheckinFilter review) {
 		return null;
 	}
