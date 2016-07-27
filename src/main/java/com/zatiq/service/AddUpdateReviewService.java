@@ -1,10 +1,19 @@
 package com.zatiq.service;
 
 import static spark.Spark.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.zatiq.dao.RatingsDaoImpl;
+import com.zatiq.dao.ReviewDaoImpl;
 
 @Service
 public class AddUpdateReviewService {
+	
+	@Autowired
+	private ReviewDaoImpl reviewDao;
+	
 	public AddUpdateReviewService() {
 		post("/review/add/", (req, res) -> {
 			

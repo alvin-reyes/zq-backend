@@ -1,21 +1,22 @@
 package com.zatiq.service;
 
-import static spark.Spark.*;
+import static spark.Spark.get;
+import static spark.Spark.post;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.zatiq.dao.BusinessDaoImpl;
 import com.zatiq.dao.RatingsDaoImpl;
-
 @Service
-public class AddUpdateRatingsService {
+public class AddUpdateBusinessService {
 	
 	@Autowired
-	private RatingsDaoImpl ratingDao;
+	private BusinessDaoImpl businessDao;
 	
-	public AddUpdateRatingsService() {
+	public AddUpdateBusinessService() {
 		
-		post("/rating/add/", (req, res) -> {
+		post("/business/add/", (req, res) -> {
 			
 			//	Save the business if isn't in there.
 			String businessMetadata = req.queryParams("business");
@@ -24,12 +25,11 @@ public class AddUpdateRatingsService {
 			String userId = req.queryParams("user_id");
 			String review = req.queryParams("rating");
 			
-			//
 			
-			return "hello!!";
+			return null;
 		});
-		get("/rating/update/", (req, res) -> {
-			//	update the review
+		
+		get("/business/update", (req, res) -> {
 			return "hello world1";
 		});
 	}
