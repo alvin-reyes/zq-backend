@@ -3,6 +3,7 @@ package com.zatiq.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.zatiq.service.AddUpdateBusinessService;
 import com.zatiq.service.AddUpdateRatingsService;
 import com.zatiq.service.AddUpdateReviewService;
 import com.zatiq.service.ErLoadPatientService;
@@ -21,8 +22,8 @@ public class ServiceConfig {
 	}
 	
 	@Bean
-	public ErLoadPatientService getErLoadPatientService() {
-		return new ErLoadPatientService();
+	public AddUpdateBusinessService getAddUpdateBuisnessService() {
+		return new AddUpdateBusinessService();
 	}
 
 }
