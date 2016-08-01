@@ -9,13 +9,16 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author Alvin
+ * The Class ReviewDaoImplTest.
  *
+ * @author Alvin
  */
 public class ReviewDaoImplTest {
 
 	/**
-	 * @throws java.lang.Exception
+	 * Sets the up.
+	 *
+	 * @throws Exception the exception
 	 */
 	@Before
 	public void setUp() throws Exception {

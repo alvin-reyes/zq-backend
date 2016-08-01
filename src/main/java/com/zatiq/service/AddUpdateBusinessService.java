@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.zatiq.service;
 
 import static spark.Spark.get;
@@ -13,6 +16,14 @@ public class AddUpdateBusinessService {
 	private BusinessDaoImpl businessDao;
 	
 	public AddUpdateBusinessService() {
+		
+		post("business/add/bulk" , (req,res)-> {
+			//	We need to create service that accepts bulk inserts.
+			//	We need to check each if it's already on the database, if it is, then don't insert.
+			//	If it's not then insert
+			
+			return null;
+		});
 		
 		post("/business/add/", (req, res) -> {
 			
