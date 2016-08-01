@@ -13,12 +13,12 @@ import com.zatiq.dao.CheckinDaoImpl;
 import com.zatiq.dao.RatingsDaoImpl;
 
 @Service
-public class CheckInService implements ZqService {
+public class AddUpdateCheckInService implements ZqService {
 	
 	@Autowired
 	private CheckinDaoImpl checkinDao;
 	
-	public CheckInService() {
+	public AddUpdateCheckInService() {
 		
 		post("/rating/add/", (req, res) -> {
 			

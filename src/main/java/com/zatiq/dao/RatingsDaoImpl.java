@@ -11,6 +11,7 @@ import org.jooq.exception.DataAccessException;
 import org.jooq.impl.DSL;
 import org.springframework.stereotype.Repository;
 import com.zatiq.dao.filter.RatingFilter;
+import com.zatiq.exceptions.DaoException;
 import com.zatiq.jooq.gen.tables.BusinessUserRating;
 import com.zatiq.jooq.gen.tables.records.BusinessUserRatingRecord;
 import com.zatiq.obj.Rating;
@@ -18,7 +19,7 @@ import com.zatiq.obj.Rating;
 @Repository
 public class RatingsDaoImpl extends BaseDao {
 	
-	public void insertOrUpdateRating(Rating rating) {
+	public void insertOrUpdateRating(Rating rating) throws DaoException {
 		try {
 			//	We need to check first if this is an update or not. So Let's check if the rating id is 0 or now.
 			if(rating.getId() == -1) {

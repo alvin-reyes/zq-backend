@@ -41,13 +41,14 @@ public class AddUpdateBusinessService implements ZqService {
 			}catch(DaoException daoEx) {
 				daoEx.printStackTrace();
 				res.status(500);	//set status to 500 to indicate error
+				return DEFAULT_ERROR_RESPONSE;
 			}
 			
 			res.header("Access-Control-Allow-Headers","Content-Type");
 			res.header("Access-Control-Allow-Methods","POST");
 			res.header("Access-Control-Allow-Origin","http://localhost:8100");
 			
-			return res.status();
+			return DEFAULT_SUCCESSFUL_RESPONSE;
 		});
 		
 		post("/business/update/", (req, res) -> {
@@ -66,13 +67,14 @@ public class AddUpdateBusinessService implements ZqService {
 			}catch(DaoException daoEx) {
 				daoEx.printStackTrace();
 				res.status(500);	//set status to 500 to indicate error
+				return DEFAULT_ERROR_RESPONSE;
 			}
 			
 			res.header("Access-Control-Allow-Headers","Content-Type");
 			res.header("Access-Control-Allow-Methods","POST");
 			res.header("Access-Control-Allow-Origin","http://localhost:8100");
 			
-			return res.status();
+			return DEFAULT_SUCCESSFUL_RESPONSE;
 		});
 	}
 }
