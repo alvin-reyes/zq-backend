@@ -1,5 +1,5 @@
 package com.zatiq.exceptions;
 
-public class DaoException {
+public class DaoException extends Exception {
 
 }

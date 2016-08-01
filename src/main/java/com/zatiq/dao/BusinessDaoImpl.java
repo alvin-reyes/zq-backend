@@ -9,6 +9,7 @@ import org.jooq.exception.DataAccessException;
 import org.jooq.impl.DSL;
 import org.springframework.stereotype.Repository;
 import com.zatiq.dao.filter.BusinessFilter;
+import com.zatiq.exceptions.DaoException;
 import com.zatiq.jooq.gen.tables.records.BusinessRecord;
 import com.zatiq.obj.Business;
 
@@ -23,7 +24,7 @@ public class BusinessDaoImpl extends BaseDao {
 	 *
 	 * @param business the business
 	 */
-	public void insertOrUpdateBusiness(Business business) {
+	public void insertOrUpdateBusiness(Business business) throws DaoException {
 		try {
 			//	We need to check first if this is an update or not. So Let's check if the rating id is 0 or now.
 			if(business.getId() == -1) {

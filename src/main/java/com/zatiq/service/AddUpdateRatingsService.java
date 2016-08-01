@@ -11,14 +11,16 @@ import org.springframework.stereotype.Service;
 import com.zatiq.dao.RatingsDaoImpl;
 
 @Service
-public class AddUpdateRatingsService {
+public class AddUpdateRatingsService implements ZqService {
 	
 	@Autowired
 	private RatingsDaoImpl ratingDao;
 	
 	public AddUpdateRatingsService() {
 		
+
 		post("/rating/add/", (req, res) -> {
+			
 			
 			//	Save the business if isn't in there.
 			String businessMetadata = req.queryParams("business");
@@ -31,7 +33,7 @@ public class AddUpdateRatingsService {
 			
 			return "hello!!";
 		});
-		get("/rating/update/", (req, res) -> {
+		post("/rating/update/", (req, res) -> {
 			//	update the review
 			return "hello world1";
 		});

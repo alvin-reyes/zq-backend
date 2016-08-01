@@ -12,7 +12,7 @@ import com.zatiq.dao.RatingsDaoImpl;
 import com.zatiq.dao.ReviewDaoImpl;
 
 @Service
-public class AddUpdateReviewService {
+public class AddUpdateReviewService implements ZqService {
 	
 	@Autowired
 	private ReviewDaoImpl reviewDao;

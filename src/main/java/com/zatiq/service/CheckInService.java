@@ -13,7 +13,7 @@ import com.zatiq.dao.CheckinDaoImpl;
 import com.zatiq.dao.RatingsDaoImpl;
 
 @Service
-public class CheckInService {
+public class CheckInService implements ZqService {
 	
 	@Autowired
 	private CheckinDaoImpl checkinDao;

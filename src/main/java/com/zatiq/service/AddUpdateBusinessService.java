@@ -1,6 +1,3 @@
-/*
- * 
- */
 package com.zatiq.service;
 
 import static spark.Spark.get;
@@ -9,8 +6,11 @@ import static spark.Spark.post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.zatiq.dao.BusinessDaoImpl;
+import com.zatiq.exceptions.DaoException;
+import com.zatiq.obj.Business;
+
 @Service
-public class AddUpdateBusinessService {
+public class AddUpdateBusinessService implements ZqService {
 	
 	@Autowired
 	private BusinessDaoImpl businessDao;
@@ -25,24 +25,54 @@ public class AddUpdateBusinessService {
 			return "bulk";
 		});
 		
-		post("/business/add/", (req, res) -> {
-			
-			//	Save the business if isn't in there.
-			String businessMetadata = req.queryParams("business");
-			
-			//	Save the review
-			String userId = req.queryParams("user_id");
-			String review = req.queryParams("rating");
+		post("/business/add/", (req, res) -> {	
+			try {
+				//	Create the object.
+				Business businessToBeProcessed = new Business();
+				businessToBeProcessed.setBusinessMetaData(req.queryParams("metadata"));
+				businessToBeProcessed.setName(req.queryParams("bname"));
+				businessToBeProcessed.setPhotoUrl(req.queryParams("bphoto"));
+				businessToBeProcessed.setCoordLat(req.queryParams("blat"));
+				businessToBeProcessed.setCoordLong(req.queryParams("blong"));	
+				
+				//	Save it!
+				businessDao.insertOrUpdateBusiness(businessToBeProcessed);
+				res.status(200);	//successful if no errors.
+			}catch(DaoException daoEx) {
+				daoEx.printStackTrace();
+				res.status(500);	//set status to 500 to indicate error
+			}
 			
 			res.header("Access-Control-Allow-Headers","Content-Type");
 			res.header("Access-Control-Allow-Methods","POST");
 			res.header("Access-Control-Allow-Origin","http://localhost:8100");
 			
-			return "hello";
+			return res.status();
 		});
 		
-		get("/business/update/", (req, res) -> {
-			return "hello world1";
+		post("/business/update/", (req, res) -> {
+			try {
+				//	Create the object.
+				Business businessToBeProcessed = new Business();
+				businessToBeProcessed.setBusinessMetaData(req.queryParams("metadata"));
+				businessToBeProcessed.setName(req.queryParams("bname"));
+				businessToBeProcessed.setPhotoUrl(req.queryParams("bphoto"));
+				businessToBeProcessed.setCoordLat(req.queryParams("blat"));
+				businessToBeProcessed.setCoordLong(req.queryParams("blong"));	
+				
+				//	Save it!
+				businessDao.insertOrUpdateBusiness(businessToBeProcessed);
+				res.status(200);	//successful if no errors.
+			}catch(DaoException daoEx) {
+				daoEx.printStackTrace();
+				res.status(500);	//set status to 500 to indicate error
+			}
+			
+			res.header("Access-Control-Allow-Headers","Content-Type");
+			res.header("Access-Control-Allow-Methods","POST");
+			res.header("Access-Control-Allow-Origin","http://localhost:8100");
+			
+			return res.status();
 		});
 	}
 }

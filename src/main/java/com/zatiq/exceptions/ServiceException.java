@@ -1,5 +1,5 @@
 package com.zatiq.exceptions;
 
-public class ServiceException {
+public class ServiceException extends Exception {
 
 }
