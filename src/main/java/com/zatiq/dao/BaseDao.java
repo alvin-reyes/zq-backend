@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.zatiq.dao;
 
 import java.sql.Connection;
@@ -9,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class BaseDao.
  */

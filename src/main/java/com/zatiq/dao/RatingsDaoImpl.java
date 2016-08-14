@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.zatiq.dao;
 
 import java.sql.Date;
@@ -16,9 +19,19 @@ import com.zatiq.jooq.gen.tables.BusinessUserRating;
 import com.zatiq.jooq.gen.tables.records.BusinessUserRatingRecord;
 import com.zatiq.obj.Rating;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RatingsDaoImpl.
+ */
 @Repository
 public class RatingsDaoImpl extends BaseDao {
 	
+	/**
+	 * Insert or update rating.
+	 *
+	 * @param rating the rating
+	 * @throws DaoException the dao exception
+	 */
 	public void insertOrUpdateRating(Rating rating) throws DaoException {
 		try {
 			//	We need to check first if this is an update or not. So Let's check if the rating id is 0 or now.
@@ -51,6 +64,12 @@ public class RatingsDaoImpl extends BaseDao {
 		}
 	}
 	
+	/**
+	 * Gets the ratings.
+	 *
+	 * @param review the review
+	 * @return the ratings
+	 */
 	public Result<BusinessUserRatingRecord> getRatings(RatingFilter review) {
 		return null;
 	}

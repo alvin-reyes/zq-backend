@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.zatiq.dao;
 
 import java.sql.SQLException;
@@ -14,6 +17,7 @@ import com.zatiq.jooq.gen.tables.records.BusinessCheckinRecord;
 import com.zatiq.obj.Checkin;
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class CheckinDaoImpl.
  */

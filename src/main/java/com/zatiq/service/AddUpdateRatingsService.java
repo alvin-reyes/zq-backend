@@ -13,12 +13,20 @@ import com.zatiq.exceptions.DaoException;
 import com.zatiq.obj.Business;
 import com.zatiq.obj.Rating;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AddUpdateRatingsService.
+ */
 @Service
 public class AddUpdateRatingsService implements ZqService {
 	
+	/** The rating dao. */
 	@Autowired
 	private RatingsDaoImpl ratingDao;
 	
+	/**
+	 * Instantiates a new adds the update ratings service.
+	 */
 	public AddUpdateRatingsService() {
 		
 

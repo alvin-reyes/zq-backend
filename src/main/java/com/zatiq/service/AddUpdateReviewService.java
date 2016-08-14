@@ -11,12 +11,20 @@ import org.springframework.stereotype.Service;
 import com.zatiq.dao.RatingsDaoImpl;
 import com.zatiq.dao.ReviewDaoImpl;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AddUpdateReviewService.
+ */
 @Service
 public class AddUpdateReviewService implements ZqService {
 	
+	/** The review dao. */
 	@Autowired
 	private ReviewDaoImpl reviewDao;
 	
+	/**
+	 * Instantiates a new adds the update review service.
+	 */
 	public AddUpdateReviewService() {
 		post("/review/add/", (req, res) -> {
 			

@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.zatiq.dao;
 
 import java.sql.SQLException;
@@ -15,9 +18,18 @@ import com.zatiq.jooq.gen.tables.BusinessUserReview;
 import com.zatiq.jooq.gen.tables.records.BusinessUserReviewRecord;
 import com.zatiq.obj.Review;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ReviewDaoImpl.
+ */
 @Repository
 public class ReviewDaoImpl extends BaseDao {
 
+	/**
+	 * Insert or update review.
+	 *
+	 * @param review the review
+	 */
 	public void insertOrUpdateReview(Review review) {
 		try {
 			//	We need to check first if this is an update or not. So Let's check if the rating id is 0 or now.
@@ -49,6 +61,12 @@ public class ReviewDaoImpl extends BaseDao {
 		}
 	}
 	
+	/**
+	 * Gets the reviews.
+	 *
+	 * @param review the review
+	 * @return the reviews
+	 */
 	public Result<BusinessUserReviewRecord> getReviews(ReviewFilter review) {
 		return null;
 	}

@@ -12,12 +12,20 @@ import org.springframework.stereotype.Service;
 import com.zatiq.dao.CheckinDaoImpl;
 import com.zatiq.dao.RatingsDaoImpl;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AddUpdateCheckInService.
+ */
 @Service
 public class AddUpdateCheckInService implements ZqService {
 	
+	/** The checkin dao. */
 	@Autowired
 	private CheckinDaoImpl checkinDao;
 	
+	/**
+	 * Instantiates a new adds the update check in service.
+	 */
 	public AddUpdateCheckInService() {
 		
 		post("/rating/add/", (req, res) -> {

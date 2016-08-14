@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.zatiq.dao;
 
 import java.sql.SQLException;
@@ -13,6 +16,7 @@ import com.zatiq.exceptions.DaoException;
 import com.zatiq.jooq.gen.tables.records.BusinessRecord;
 import com.zatiq.obj.Business;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class BusinessDaoImpl.
  */
@@ -23,6 +27,7 @@ public class BusinessDaoImpl extends BaseDao {
 	 * Insert or update business.
 	 *
 	 * @param business the business
+	 * @throws DaoException the dao exception
 	 */
 	public void insertOrUpdateBusiness(Business business) throws DaoException {
 		try {

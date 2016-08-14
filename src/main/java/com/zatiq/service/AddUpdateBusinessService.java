@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.zatiq.service;
 
 import static spark.Spark.get;
@@ -9,12 +12,20 @@ import com.zatiq.dao.BusinessDaoImpl;
 import com.zatiq.exceptions.DaoException;
 import com.zatiq.obj.Business;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AddUpdateBusinessService.
+ */
 @Service
 public class AddUpdateBusinessService implements ZqService {
 	
+	/** The business dao. */
 	@Autowired
 	private BusinessDaoImpl businessDao;
 	
+	/**
+	 * Instantiates a new adds the update business service.
+	 */
 	public AddUpdateBusinessService() {
 		
 		post("/business/add/bulk/" , (req,res)-> {
